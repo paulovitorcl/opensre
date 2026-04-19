@@ -15,7 +15,7 @@ OpenSRE queries ClickHouse system tables to surface slow queries, active connect
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -25,7 +25,7 @@ Select **ClickHouse** when prompted and provide your host and credentials.
 
 Add to your `.env`:
 
-```bash
+```
 CLICKHOUSE_HOST=your-clickhouse-host
 CLICKHOUSE_PORT=8123
 CLICKHOUSE_DATABASE=default
@@ -86,7 +86,7 @@ All operations are read-only.
 
 ## Verify
 
-```bash
+```
 opensre integrations verify clickhouse
 ```
 

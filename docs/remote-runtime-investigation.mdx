@@ -12,25 +12,25 @@ description: 'Start an RCA investigation for a deployed service by name'
 You must have deployed a service via `opensre deploy` (or registered a named remote) and configured a remote ops provider.
 
 1. **Deploy or register a named remote:**
-   ```bash
+   ```
    opensre deploy ec2        # creates a named remote "ec2"
    # or register manually:
    opensre remote health https://my-service.up.railway.app
    ```
 
 2. **Configure the remote ops provider (once):**
-   ```bash
+   ```
    opensre remote ops status     # prompts for provider/project/service on first run
    ```
 
 ## Usage
 
-```bash
+```
 opensre investigate --service <name>
 ```
 
 For example:
-```bash
+```
 opensre investigate --service api-backend
 opensre investigate --service api-backend --output ./rca.json
 ```
@@ -50,7 +50,7 @@ The output is the same structured RCA report you'd get from running `opensre inv
 
 Pass `--slack-thread CHANNEL/TS` to also pull the messages from a specific Slack thread as investigation context. This is useful when an incident originated in a Slack conversation.
 
-```bash
+```
 export SLACK_BOT_TOKEN=xoxb-...
 opensre investigate --service api-backend --slack-thread C01234/1712345.000001
 ```

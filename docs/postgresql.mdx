@@ -15,7 +15,7 @@ OpenSRE uses PostgreSQL diagnostics to investigate database-related alerts — c
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -25,7 +25,7 @@ Select **PostgreSQL** when prompted and provide your host, database, and credent
 
 Add to your `.env`:
 
-```bash
+```
 POSTGRESQL_HOST=your-postgresql-host
 POSTGRESQL_PORT=5432
 POSTGRESQL_DATABASE=your-database
@@ -133,7 +133,7 @@ Reads `pg_stat_user_tables` and `pg_class` for a given schema (default `public`)
 
 ## Verify
 
-```bash
+```
 opensre integrations verify postgresql
 ```
 

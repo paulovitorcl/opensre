@@ -30,7 +30,7 @@ Snakemake reports high-level progress, but OpenSRE explains why rules take time 
 If OpenSRE is already installed on your operating system, you only need to enable the OpenSRE agent for pipelines that have not been run with OpenSRE before.<br/>
 In that case, run the following command:
 
-```bash
+```
 sudo tracer init --token <your-token>
 ```
 <Info> Go to our [onboarding](https://app.tracer.cloud/dashboard) to get your own personal token</Info>
@@ -41,13 +41,13 @@ When running this command, you will be asked to name your pipeline for clear lab
 
 Run a Snakemake pipeline under OpenSRE:
 
-```bash
+```
 snakemake -j 16
 ```
 
 or launch the OpenSRE demo workflow:
 
-```bash
+```
 sudo tracer demo
 ```
 

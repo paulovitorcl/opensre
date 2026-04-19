@@ -15,7 +15,7 @@ OpenSRE uses MongoDB diagnostics to investigate database-related alerts — chec
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -25,7 +25,7 @@ Select **MongoDB** when prompted and provide your connection string and target d
 
 Add to your `.env`:
 
-```bash
+```
 MONGODB_CONNECTION_STRING=mongodb+srv://user:pass@cluster.example.net
 MONGODB_DATABASE=production
 MONGODB_AUTH_SOURCE=admin
@@ -64,7 +64,7 @@ Integrations are automatically persisted to `~/.tracer/integrations.json`:
 
 ## Connection string formats
 
-```bash
+```
 # Localhost (no auth)
 mongodb://localhost:27017
 
@@ -86,7 +86,7 @@ URL-encode special characters in credentials: `@` → `%40`, `:` → `%3A`, `#` 
 
 TLS is enabled by default. For custom certificates:
 
-```bash
+```
 MONGODB_CA_CERT=/path/to/ca.pem      # Custom CA certificate
 MONGODB_TLS_INSECURE=true             # Skip validation (dev only)
 ```
@@ -121,7 +121,7 @@ Returns document count, storage size, index count, and average object size for a
 
 ## Verify
 
-```bash
+```
 opensre integrations verify mongodb
 ```
 

@@ -53,7 +53,7 @@ Both can be active together: guardrails apply first at the LLM client layer, the
 
 ## Example
 
-```bash
+```
 export OPENSRE_MASK_ENABLED=true
 export OPENSRE_MASK_KINDS=pod,namespace,cluster,hostname
 opensre investigate -i tests/e2e/kubernetes/fixtures/datadog_k8s_alert.json

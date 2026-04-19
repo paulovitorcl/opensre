@@ -37,7 +37,7 @@ If your GitLab instance is self-hosted, make sure your OpenSRE server can reach 
 
 Run the setup wizard and select **GitLab**:
 
-```bash
+```
 opensre onboard
 ```
 
@@ -74,7 +74,7 @@ OpenSRE can post a formatted investigation summary directly as a note on the Git
 
 To enable it, set the following environment variable:
 
-```bash
+```
 GITLAB_MR_WRITEBACK=true
 ```
 
@@ -100,7 +100,7 @@ Your token does not have sufficient scopes. Ensure `read_api` is selected (and `
 
 Verify that `GITLAB_BASE_URL` ends in `/api/v4` and that your OpenSRE server can reach the GitLab host. Test with:
 
-```bash
+```
 curl -H "Authorization: Bearer <your-token>" https://your-gitlab-host/api/v4/user
 ```
 

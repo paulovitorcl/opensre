@@ -29,7 +29,7 @@ OpenSRE adds that missing layer:
 If OpenSRE is already installed on your operating system, you only need to enable the OpenSRE agent for pipelines that have not been run with OpenSRE before.<br/>
 In that case, run the following command:
 
-```bash
+```
 sudo tracer init --token <your-token>
 ```
 <Info> Go to our [onboarding](https://app.tracer.cloud/dashboard) to get your own personal token</Info>
@@ -40,7 +40,7 @@ When running this command, you will be asked to name your pipeline for clear lab
 
 Run a Slurm pipeline under OpenSRE:
 
-```bash
+```
 #!/bin/bash
 #SBATCH --job-name=test
 #SBATCH --cpus-per-task=8
@@ -51,13 +51,13 @@ python analysis.py
 ```
 
 Submit this job as usual with:
-```bashsbatch 
+```sbatch 
 my_job.sh
 ```
 
 or launch the OpenSRE demo workflow:
 
-```bash
+```
 sudo tracer demo
 ```
 

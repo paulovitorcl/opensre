@@ -14,7 +14,7 @@ OpenSRE queries Sentry to retrieve recent issues, error events, and stack traces
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -24,7 +24,7 @@ Select **Sentry** when prompted and provide your organization slug and auth toke
 
 Add to your `.env`:
 
-```bash
+```
 SENTRY_ORG_SLUG=your-organization-slug
 SENTRY_AUTH_TOKEN=sntrys_your_token
 SENTRY_URL=https://sentry.io           # optional, for self-hosted Sentry
@@ -78,7 +78,7 @@ The organization slug appears in your Sentry URL: `https://sentry.io/organizatio
 
 ## Verify
 
-```bash
+```
 opensre integrations verify sentry
 ```
 

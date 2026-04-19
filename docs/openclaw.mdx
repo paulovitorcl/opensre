@@ -9,7 +9,7 @@ OpenClaw can call OpenSRE's `run_rca` MCP tool so you can investigate alerts fro
 
 ### 1. Start OpenSRE MCP
 
-```bash
+```
 opensre-mcp
 ```
 
@@ -34,7 +34,7 @@ If `opensre-mcp` is not on your `PATH`, use the full path to the binary in your 
 
 Run the wizard once and connect Datadog, Grafana, Sentry, or another backend:
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -42,7 +42,7 @@ opensre integrations setup
 
 Run the fixture directly with the investigate command:
 
-```bash
+```
 opensre investigate -i tests/fixtures/openclaw_test_alert.json
 ```
 
@@ -52,7 +52,7 @@ Once that works, you can call OpenSRE from OpenClaw through the `run_rca` MCP to
 
 If you want the OpenSRE investigation pipeline to query OpenClaw during RCA runs, use the OpenClaw stdio bridge:
 
-```bash
+```
 export OPENCLAW_MCP_MODE=stdio
 export OPENCLAW_MCP_COMMAND=openclaw
 export OPENCLAW_MCP_ARGS="mcp serve"
@@ -60,13 +60,13 @@ export OPENCLAW_MCP_ARGS="mcp serve"
 
 Keep the OpenClaw Gateway running while you investigate:
 
-```bash
+```
 openclaw gateway run
 ```
 
 Verify it with:
 
-```bash
+```
 opensre integrations verify openclaw
 ```
 

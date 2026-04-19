@@ -14,7 +14,7 @@ OpenSRE uses AWS to map your environment: Lambda functions, EKS clusters, S3 buc
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -22,7 +22,7 @@ Select **AWS** when prompted and provide your credentials.
 
 ### Option 2: Environment variables (IAM role)
 
-```bash
+```
 AWS_ROLE_ARN=arn:aws:iam::123456789012:role/OpenSREReadOnly
 AWS_EXTERNAL_ID=your-external-id     # optional
 AWS_REGION=us-east-1
@@ -30,7 +30,7 @@ AWS_REGION=us-east-1
 
 ### Option 3: Environment variables (static keys)
 
-```bash
+```
 AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 AWS_SESSION_TOKEN=...                # optional, for temporary credentials
@@ -88,7 +88,7 @@ For least-privilege, the minimum services used are:
 
 ## Verify
 
-```bash
+```
 opensre integrations verify aws
 ```
 

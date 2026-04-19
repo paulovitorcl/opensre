@@ -65,11 +65,11 @@ Resources:
 
 Add these commands to the `runcmd`: section in your UserData:
 
-```bash
+```
 - curl -sSL https://install.tracer.cloud | sh
 ```
 
-```bash
+```
 - tracer init --token YOUR_TOKEN_HERE \
      --pipeline-name YOUR_PIPELINE_NAME \
      --pipeline-type YOUR_PIPELINE_TYPE \
@@ -85,12 +85,12 @@ Add these commands to the `runcmd`: section in your UserData:
 
 ### 4. Validate, apply change set, then verify instance
 
-```bash
+```
 aws cloudformation validate-template \
   --template-body file://YOUR_TEMPLATE.yaml
 ```
 
-```bash
+```
 aws cloudformation create-change-set \
   --stack-name YOUR_STACK_NAME \
   --template-body file://YOUR_TEMPLATE.yaml \
@@ -98,7 +98,7 @@ aws cloudformation create-change-set \
   --capabilities CAPABILITY_NAMED_IAM
 ```
 
-```bash
+```
 aws cloudformation execute-change-set \
   --stack-name YOUR_STACK_NAME \
   --change-set-name tracer-userdata-update
@@ -113,7 +113,7 @@ In your Nextflow `batch.config` file, you need to:
 
 This allows OpenSRE to correlate all jobs from the same workflow execution.
 
-```bash
+```
 // 1. Add params section to generate UUID
 params {customUUID = java.util.UUID.randomUUID().toString()}
 
@@ -246,7 +246,7 @@ Open the following link to connect your AWS account automatically to OpenSRE. Th
 
 Clone the nextflow-test-pipelines repository to get access to the AWS Batch RNA-seq pipeline configuration.
 
-```bash
+```
 git clone https://github.com/Tracer-Cloud/nextflow-test-pipelines.git
 cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
 ```
@@ -255,7 +255,7 @@ cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
 
 Update the user_data_mime.sh file to include your OpenSRE user ID. Navigate to the terraform directory and edit the file:
 
-```bash
+```
 cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq/terraform
 vim user_data_mime.sh
 ```
@@ -263,7 +263,7 @@ vim user_data_mime.sh
 <Info>
 **Important:** Find line 120 in the file and update it with your user ID:
 
-```bash
+```
 tracer init --token YOUR_TOKEN_HERE
 --pipeline-name aws_batch_rnaseq
 --pipeline-type RNA-SEQ
@@ -287,7 +287,7 @@ tracer init --token YOUR_TOKEN_HERE
 
 Run the setup script to create the AWS infrastructure (VPC, S3, Batch, etc.):
 
-```bash
+```
 cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
 ./run.sh setup
 ```
@@ -301,7 +301,7 @@ cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
 <Info>
   **Alternative for OpenSRE AWS Account Users:** If you have access to OpenSRE's
   AWS account, you can skip the infrastructure setup and run the pipeline
-  directly: ```bash cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
+  directly: ``` cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
   ./run.sh tracer run ```
 </Info>
 
@@ -309,7 +309,7 @@ cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
 
 Execute the RNA-seq pipeline using the run script:
 
-```bash
+```
 cd nextflow-test-pipelines/pipelines/aws-batch/rnaseq
 ./run.sh run
 ```

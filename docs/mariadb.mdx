@@ -15,7 +15,7 @@ OpenSRE uses MariaDB diagnostics to investigate database-related alerts — chec
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup mariadb
 ```
 
@@ -25,7 +25,7 @@ You will be prompted for host, port, database, username, password, and whether t
 
 Add to your `.env`:
 
-```bash
+```
 MARIADB_HOST=db.example.com
 MARIADB_PORT=3306
 MARIADB_DATABASE=production
@@ -115,7 +115,7 @@ Runs `SHOW ALL REPLICAS STATUS` (MariaDB multi-source replication; alias: `SHOW 
 
 ## Verify
 
-```bash
+```
 opensre integrations verify mariadb
 ```
 

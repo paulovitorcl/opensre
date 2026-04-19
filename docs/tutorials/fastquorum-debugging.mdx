@@ -44,7 +44,7 @@ We begin in a GitHub Codespace — a reproducible, cloud-based dev environment t
   <Step title="Install OpenSRE (One-Liner with Dev Branch & User Token)">
     In the Codespaces terminal, run:
 
-    ```bash
+    ```
     curl -sSL https://install.tracer.cloud | CLI_BRANCH=dev sh -s user_35Fukh3QxSAxJLgfyE9SwPoPy9K
     ```
   </Step>
@@ -52,7 +52,7 @@ We begin in a GitHub Codespace — a reproducible, cloud-based dev environment t
   <Step title="Start OpenSRE Agent">
     To start tracking a pipeline, run the following command:
 
-    ```bash
+    ```
     tracer init --token eyJh---- (your token)
     ```
 
@@ -100,7 +100,7 @@ To eliminate I/O noise during the observed run, the genome index (BWA-MEM1, SAMt
 
 From the pipeline root:
 
-```bash
+```
 nextflow run . \
   --input samplesheet.csv \
   --fasta data/chr17.fa \

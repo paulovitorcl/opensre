@@ -5,7 +5,7 @@ rules to detect, redact, block, or audit sensitive information.
 
 ## Quick start
 
-```shell
+```
 # Generate a starter config with common patterns
 opensre guardrails init
 

@@ -14,7 +14,7 @@ OpenSRE queries Kafka to retrieve topic partition health, consumer group lag, an
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -24,7 +24,7 @@ Select **Kafka** when prompted and provide your bootstrap servers.
 
 Add to your `.env`:
 
-```bash
+```
 KAFKA_BOOTSTRAP_SERVERS=broker1:9092,broker2:9092
 KAFKA_SECURITY_PROTOCOL=PLAINTEXT    # or SASL_SSL, SSL, SASL_PLAINTEXT
 KAFKA_SASL_MECHANISM=PLAIN           # optional, for SASL
@@ -66,7 +66,7 @@ KAFKA_SASL_PASSWORD=your-password    # optional
 
 **MSK (AWS Managed Kafka) with IAM:**
 
-```bash
+```
 KAFKA_BOOTSTRAP_SERVERS=b-1.your-cluster.kafka.us-east-1.amazonaws.com:9098
 KAFKA_SECURITY_PROTOCOL=SASL_SSL
 KAFKA_SASL_MECHANISM=AWS_MSK_IAM
@@ -74,7 +74,7 @@ KAFKA_SASL_MECHANISM=AWS_MSK_IAM
 
 **Confluent Cloud:**
 
-```bash
+```
 KAFKA_BOOTSTRAP_SERVERS=pkc-xxxxx.us-east-1.aws.confluent.cloud:9092
 KAFKA_SECURITY_PROTOCOL=SASL_SSL
 KAFKA_SASL_MECHANISM=PLAIN
@@ -93,7 +93,7 @@ All operations are read-only.
 
 ## Verify
 
-```bash
+```
 opensre integrations verify kafka
 ```
 

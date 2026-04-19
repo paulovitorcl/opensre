@@ -14,7 +14,7 @@ OpenSRE queries Honeycomb to surface distributed traces during alert investigati
 
 ### Option 1: Interactive CLI
 
-```bash
+```
 opensre integrations setup
 ```
 
@@ -24,7 +24,7 @@ Select **Honeycomb** when prompted and provide your API key and dataset.
 
 Add to your `.env`:
 
-```bash
+```
 HONEYCOMB_API_KEY=your-api-key
 HONEYCOMB_DATASET=your-dataset      # optional, defaults to __all__
 HONEYCOMB_API_URL=https://api.honeycomb.io  # optional
@@ -69,7 +69,7 @@ Use `__all__` as the dataset to query across all datasets in an environment. For
 
 ## Verify
 
-```bash
+```
 opensre integrations verify honeycomb
 ```
 

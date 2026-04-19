@@ -19,7 +19,7 @@ Not reported:
 
 From the repository root:
 
-```shell
+```
 make benchmark
 ```
 
@@ -29,13 +29,13 @@ This runs the benchmark suite **and** updates the `## Benchmark` section in
 
 To update only the README from a previously generated report (no LLM calls):
 
-```shell
+```
 make benchmark-update-readme
 ```
 
 To skip the README update during a benchmark run:
 
-```shell
+```
 python -m tests.benchmarks.toolcall_model_benchmark.benchmark_generator --no-update-readme
 ```
 
@@ -69,13 +69,13 @@ keeping the README in sync without manual intervention.
 
 To write the summary to a different README file:
 
-```shell
+```
 python -m tests.benchmarks.toolcall_model_benchmark.benchmark_generator --readme-path /path/to/README.md
 ```
 
 ## Running selected scenarios
 
-```shell
+```
 python -m tests.benchmarks.toolcall_model_benchmark.benchmark_generator \
     --scenario 001-replication-lag \
     --scenario 002-connection-exhaustion
